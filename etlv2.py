@@ -77,7 +77,7 @@ print("Usuarios con gasto promedio > 100:")
 high_spenders.show()
 
 # 📤 4. Carga (ejemplo: guardar en parquet)
-agg_df.write.mode("overwrite").parquet("/tmp/etldemo/output/agg_by_user")
-high_spenders.write.mode("overwrite").parquet("/tmp/etldemo/output/high_spenders")
+agg_df.write.mode("overwrite").parquet("/Volumes/workspace/default/data/etldemov2/output/agg_by_user")
+high_spenders.write.mode("overwrite").parquet("/Volumes/workspace/default/data/etldemov2/output/high_spenders")
 
 #
