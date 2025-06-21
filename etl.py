@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, count, avg
 
 # 🔧 1. Iniciar Spark
-#spark = SparkSession.builder.appName("ETL_3_Datasets_Demo").getOrCreate()
+spark = SparkSession.builder.appName("ETL_3_Datasets_Demo").getOrCreate()
 
 # 🗃️ 2. Crear datasets dummy
 
@@ -75,7 +75,7 @@ print("Usuarios con gasto promedio > 100:")
 high_spenders.show()
 
 # 📤 4. Carga (ejemplo: guardar en parquet)
-agg_df.write.mode("overwrite").parquet("/tmp/etldemo/output/agg_by_user")
-high_spenders.write.mode("overwrite").parquet("/tmp/etldemo/output/high_spenders")
+agg_df.write.mode("overwrite").parquet("/Volumes/workspace/default/data/etldemo/output/agg_by_user")
+high_spenders.write.mode("overwrite").parquet("/Volumes/workspace/default/data/etldemo/output/high_spenders")
 
 #
